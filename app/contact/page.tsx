@@ -14,10 +14,10 @@ export default function ContactPage() {
           <p>
             <strong>Email:</strong>{" "}
             <a
-              href="mailto:youremail@example.com"
+              href="mailto:robanadu@gmail.com"
               className="underline"
             >
-              youremail@example.com
+              robanadu@gmail.com
             </a>
           </p>
           <p>
@@ -28,7 +28,7 @@ export default function ContactPage() {
               rel="noreferrer"
               className="underline"
             >
-              github.com/yourusername
+              github.com/ranadu
             </a>
           </p>
           <p>
@@ -39,7 +39,7 @@ export default function ContactPage() {
               rel="noreferrer"
               className="underline"
             >
-              linkedin.com/in/yourprofile
+              linkedin.com/in/ranadu16
             </a>
           </p>
         </div>
