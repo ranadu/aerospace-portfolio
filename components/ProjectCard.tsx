@@ -24,14 +24,12 @@ export default function ProjectCard({ p }: { p: Project }) {
       </div>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        {p.discipline.map((t) => (
-          <Tag key={t} label={t} />
-        ))}
-        {p.includes.matlab && <Tag label="MATLAB" />}
-        {p.includes.simulink && <Tag label="Simulink" />}
-        {p.includes.hardware && <Tag label="Hardware" />}
-        {p.includes.plc && <Tag label="PLC" />}
-      </div>
+  {p.discipline.map((t) => (
+    <Tag key={t} label={t} />
+  ))}
+  {p.includes.matlab && <Tag label="MATLAB" />}
+  {p.includes.simulink && <Tag label="Simulink" />}
+    </div>
     </Link>
   );
 }
