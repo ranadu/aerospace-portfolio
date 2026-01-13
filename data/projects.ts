@@ -62,7 +62,7 @@ export const projects: Project[] = [
   title: "3-DOF Helicopter Control and Trajectory Tracking",
   slug: "3dof-helicopter-control",
   status: "Completed",
-  discipline: ["Controls", "Simulation", "Aerospace"],
+  discipline: ["Controls", "Simulation", "Flight Dynamics"],
   oneLiner:
     "Closed-loop PID control of a 3-DOF helicopter achieving stable trajectory tracking under actuator constraints.",
   summary:
