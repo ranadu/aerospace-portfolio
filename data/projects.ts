@@ -1,4 +1,4 @@
-export type ProjectStatus = "Planned" | "In Progress" | "Shipped";
+export type ProjectStatus = "Planned" | "In Progress" | "Shipped" | "Completed";
 
 export type Project = {
   title: string;
