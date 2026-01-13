@@ -59,28 +59,29 @@ export const projects: Project[] = [
     includes: { matlab: true, simulink: false, hardware: false, plc: false },
   },
   {
-    title: "Flight Control System Suite (PID → LQR → Adaptive)",
-    slug: "flight-control-suite",
-    status: "Planned",
-    discipline: ["Controls", "Simulation", "Software"],
-    oneLiner:
-      "Attitude hold and performance comparisons across PID/LQR/adaptive tuning with stability metrics.",
-    summary:
-      "Controller suite layered on the 6-DOF simulator, including PID with anti-windup, LQR from a linearized model, and an auto-tuning method. Includes performance metrics and control effort analysis.",
-    engineeringFocus: [
-      "Controller design + tuning workflow",
-      "Linearization around trim",
-      "Metrics (rise/settle/overshoot/effort)",
-      "Saturation and anti-windup behavior",
-    ],
-    mathAndTheory: [
-      "State-space modeling",
-      "Eigenvalue analysis",
-      "LQR optimization (Riccati)",
-    ],
-    tools: ["Python", "MATLAB", "Control theory", "Plotting"],
-    includes: { matlab: true, simulink: true, hardware: false, plc: false },
-  },
+  title: "3-DOF Helicopter Control and Trajectory Tracking",
+  slug: "3dof-helicopter-control",
+  status: "Completed",
+  discipline: ["Controls", "Simulation", "Aerospace"],
+  oneLiner:
+    "Closed-loop PID control of a 3-DOF helicopter achieving stable trajectory tracking under actuator constraints.",
+  summary:
+    "Modeled and controlled a laboratory 3-DOF helicopter using MATLAB and Simulink. Independent PID controllers were designed and tuned for pitch, elevation, and travel axes to achieve stable trajectory tracking. Actuator saturation limits were incorporated to ensure realistic and safe motor voltage commands. Controller performance was validated through trajectory-based simulations.",
+  engineeringFocus: [
+    "Multi-axis PID controller design",
+    "Trajectory tracking and reference following",
+    "Closed-loop stability and transient response",
+    "Actuator saturation and safety limits",
+  ],
+  mathAndTheory: [
+    "Linear system modeling",
+    "PID control theory",
+    "Time-domain response analysis",
+    "Stability and steady-state error analysis",
+  ],
+  tools: ["MATLAB", "Simulink", "Control Systems"],
+  includes: { matlab: true, simulink: true, hardware: false, plc: false },
+   },
   {
     title: "Autopilot Mode Manager & Safety Logic",
     slug: "autopilot-modes-safety",
