@@ -3,6 +3,8 @@ import Tag from "@/components/Tag";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Image from "next/image";
+
 
 type Params = { slug: string } | Promise<{ slug: string }>;
 
@@ -46,6 +48,156 @@ export default async function ProjectDetail({ params }: { params: Params }) {
           <h2 className="text-xl font-semibold">Summary</h2>
           <p className="text-zinc-700 dark:text-zinc-200">{p.summary}</p>
         </section>
+
+
+
+       {/* /* Image Section */}
+        {p.slug === "3dof-helicopter-control" && (
+  <section className="space-y-6">
+    <h2 className="text-xl font-semibold">Media</h2>
+
+    {/* Hardware overview image
+    <figure className="space-y-2">
+      <div className="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800">
+        <Image
+          src="/media/3dof-helicopter-control/image1.png"
+          alt="3-DOF helicopter experimental setup"
+          width={1600}
+          height={900}
+          className="w-full h-auto"
+        />
+      </div>
+      <figcaption className="text-center text-sm text-zinc-600 dark:text-zinc-300">
+        <span className="font-medium">Figure 1.</span> Laboratory 3-DOF helicopter platform used for pitch, yaw, and elevation control experiments.
+      </figcaption>
+    </figure> */}
+    {p.slug === "3dof-helicopter-control" && (
+  <section className="space-y-4">
+    <h3 className="text-xl font-semibold">Control Architecture</h3>
+
+    <p className="text-zinc-700 dark:text-zinc-200 max-w-3xl">
+      Block-diagram representation of the closed-loop control system used for the
+      3-DOF helicopter. Independent PID controllers were designed for pitch,
+      elevation, and travel, with actuator saturation and safety limits applied
+      to motor voltage commands.
+    </p>
+
+    <figure className="space-y-3">
+      <div className="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+        <Image
+          src="/media/3dof-helicopter-control/control_architecture.png"
+          alt="Control architecture block diagram for the 3-DOF helicopter system"
+          width={1600}
+          height={900}
+          className="w-full h-auto"
+        />
+      </div>
+
+      <figcaption className="mx-auto max-w-3xl text-center text-sm text-zinc-500 dark:text-zinc-400">
+        <span className="font-medium text-zinc-700 dark:text-zinc-200">
+          Figure 1.
+        </span>{" "}
+        Control architecture showing reference tracking, PID control loops,
+        actuator saturation, and feedback from the helicopter dynamics.
+      </figcaption>
+    </figure>
+  </section>
+)}
+
+
+    {/* Control response plots (grid) */}
+<div className="grid gap-6 md:grid-cols-2">
+  <figure className="space-y-3">
+    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <Image
+        src="/media/3dof-helicopter-control/image1.png"
+        alt="Elevation and pitch response"
+        width={1200}
+        height={800}
+        className="w-full h-auto"
+      />
+    </div>
+    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 2.</span>{" "}
+      Elevation and pitch closed-loop response.
+    </figcaption>
+  </figure>
+
+  <figure className="space-y-3">
+    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <Image
+        src="/media/3dof-helicopter-control/image1.png"
+        alt="Elevation and pitch response"
+        width={1200}
+        height={800}
+        className="w-full h-auto"
+      />
+    </div>
+    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 2.</span>{" "}
+      Elevation and pitch closed-loop response.
+    </figcaption>
+  </figure>
+
+<figure className="space-y-3">
+    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <Image
+        src="/media/3dof-helicopter-control/image2.png"
+        alt="Travel angle tracking response"
+        width={1200}
+        height={800}
+        className="w-full h-auto"
+      />
+    </div>
+    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 3.</span>{" "}
+      Travel angle tracking under reference changes.
+    </figcaption>
+  </figure>
+
+  <figure className="space-y-3">
+    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <Image
+        src="/media/3dof-helicopter-control/image2.png"
+        alt="Travel angle tracking response"
+        width={1200}
+        height={800}
+        className="w-full h-auto"
+      />
+    </div>
+    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 3.</span>{" "}
+      Travel angle tracking under reference changes.
+    </figcaption>
+  </figure>
+</div>
+
+
+    {/* Experimental video */}
+    <figure className="space-y-2">
+      <video
+        className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800"
+        controls
+        playsInline
+        preload="metadata"
+      >
+        <source
+          src="/media/3dof-helicopter-control/capstone-video1.mov"
+          type="video/quicktime"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <figcaption className="text-center text-sm text-zinc-600 dark:text-zinc-300">
+        <span className="font-medium">Video 1.</span> Experimental closed-loop test of the 3-DOF helicopter demonstrating real-time control performance.
+      </figcaption>
+    </figure>
+  </section>
+)}
+
+        {/* /* End Image Section */}
+
+
+
 
         <section className="grid gap-6 sm:grid-cols-2">
           <div className="space-y-2">
