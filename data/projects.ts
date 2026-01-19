@@ -6,15 +6,15 @@ export type Project = {
   status: ProjectStatus;
 
   discipline: (
-    | "Flight Dynamics"
-    | "Controls"
-    | "Avionics"
-    | "Estimation"
-    | "Hardware"
-    | "PLC"
-    | "Simulation"
-    | "Software"
-  )[];
+  | "Flight Dynamics"
+  | "Controls"
+  | "Avionics"
+  | "Estimation"
+  | "Hardware"
+  | "PLC"
+  | "Simulation"
+  | "Software"
+)[];
 
   oneLiner: string;
   summary: string;
@@ -36,30 +36,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "6-DOF Aircraft Flight Dynamics Simulator",
-    slug: "six-dof-flight-dynamics",
-    status: "Planned",
-    discipline: ["Flight Dynamics", "Simulation", "Software"],
-    oneLiner:
-      "Newton–Euler 6-DOF rigid-body sim with frames/quaternions, RK4 integration, and validation scenarios.",
-    summary:
-      "A reusable 6-DOF simulation engine for rigid-body aircraft motion with coordinate transforms, force/moment models, and telemetry outputs for control and visualization.",
-    engineeringFocus: [
-      "Rigid-body dynamics core",
-      "Reference frames and transformations",
-      "Numerical integration (RK4)",
-      "Scenario-based validation",
-    ],
-    mathAndTheory: [
-      "Newton–Euler equations",
-      "Rotation matrices and quaternions",
-      "Stability modes and perturbations",
-    ],
-    tools: ["Python", "NumPy", "Plotly/Matplotlib", "MATLAB (validation)"],
-    includes: { matlab: true, simulink: false, hardware: false, plc: false },
-  },
-  {
-  title: "3-DOF Helicopter Control and Trajectory Tracking",
+  title: "3-DOF Helicopter Control and Trajectory Tracking - Capstone Project",
   slug: "3dof-helicopter-control",
   status: "Completed",
   discipline: ["Controls", "Simulation", "Flight Dynamics"],
@@ -83,24 +60,60 @@ export const projects: Project[] = [
   includes: { matlab: true, simulink: true, hardware: false, plc: false },
    },
   {
-    title: "Autopilot Mode Manager & Safety Logic",
-    slug: "autopilot-modes-safety",
-    status: "Planned",
-    discipline: ["Avionics", "Controls", "Software"],
-    oneLiner:
-      "State-machine autopilot: MANUAL/STABILIZE/ALT_HOLD/HDG_HOLD/NAV_WP with FAILSAFE triggers.",
-    summary:
-      "UAV-style autopilot mode logic with guard conditions, priority handling, sensor dropout simulation, actuator saturation detection, and failsafe behavior with reason-coded logs.",
-    engineeringFocus: [
-      "Avionics-style mode logic",
-      "Guard conditions + priority rules",
-      "Fault scenarios and failsafe",
-      "Deterministic transition logging",
-    ],
-    mathAndTheory: ["Control loop interactions under fault conditions"],
-    tools: ["Python", "State machines", "FastAPI (optional UI)"],
-    includes: { matlab: false, simulink: false, hardware: false, plc: false },
+  title: "AI Chatbot Assistant",
+  slug: "ai-chatbot-assistant",
+  status: "Completed",
+  discipline: ["Software"],
+  oneLiner:
+    "A full-stack AI chatbot built with FastAPI and React, supporting persistent memory and dynamic UX features.",
+  summary:
+    "Developed an interactive chatbot using a custom FastAPI backend connected to the GROQ LLM API, with a React/TypeScript frontend featuring dark mode, emoji picker, chat history, and real-time assistant feedback. Deployed using Render (backend) and Vercel (frontend).",
+  engineeringFocus: [
+    "Backend API with memory management (SQLite)",
+    "Frontend UX with live typing indicator and theming",
+    "Integration with GROQ's LLM API (chat completions)",
+    "State management for chat history and sessions",
+  ],
+  mathAndTheory: [
+    "LLM prompt engineering (system/user roles)",
+    "RESTful API structure and JSON data handling",
+    "Frontend component lifecycle and state sync",
+  ],
+  tools: ["TypeScript", "React", "FastAPI", "GROQ API", "Vercel", "Render"],
+  includes: { matlab: false, simulink: false, hardware: false, plc: false },
+   },
+  {
+  title: "Flight Envelope Protection System (Fly-By-Wire)",
+  slug: "flight-envelope-protection",
+  status: "Completed",
+  discipline: ["Avionics", "Controls", "Flight Dynamics"],
+  oneLiner:
+    "Fly-by-wire envelope protection that limits pilot pitch commands to prevent stall and unsafe aircraft states.",
+  summary:
+    "A simplified fly-by-wire flight envelope protection system that monitors angle of attack and pitch rate to modify pilot commands in real time. The system prevents stall and excessive pitch rates while preserving smooth, controllable aircraft response.",
+  engineeringFocus: [
+    "Flight envelope protection logic",
+    "Pilot command shaping and limiting",
+    "Angle-of-attack based safety constraints",
+    "Rate damping and soft saturation",
+    "Safety-critical control behavior",
+  ],
+  mathAndTheory: [
+    "Linearized longitudinal aircraft dynamics",
+    "Feedback control with saturation",
+    "Stability and damping near envelope limits",
+    "Limit-cycle avoidance in control systems",
+  ],
+  tools: ["Python", "Control systems", "Numerical simulation", "Matplotlib"],
+  includes: { matlab: false, simulink: false, hardware: false, plc: false },
   },
+
+
+
+
+
+
+  // New planned projects
   {
     title: "MATLAB/Simulink Aircraft Control Verification",
     slug: "matlab-simulink-control",

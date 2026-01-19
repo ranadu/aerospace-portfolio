@@ -238,6 +238,105 @@ export default async function ProjectDetail({ params }: { params: Params }) {
           </div>
         </section>
       </div>
+
+
+      {/* Embed AI Chatbot Web App */}
+{p.slug === "ai-chatbot-assistant" && (
+  <section className="space-y-4">
+    <h2 className="text-xl font-semibold">Live Demo</h2>
+    <div className="aspect-video w-full overflow-hidden rounded-2xl border border-zinc-200 shadow-sm dark:border-zinc-800">
+      <iframe
+        src="https://ai-chatbot-cyan-alpha.vercel.app"
+        title="AI Chatbot Live Demo"
+        className="w-full h-full"
+        allow="clipboard-write"
+      />
+    </div>
+    <p className="text-sm text-zinc-600 dark:text-zinc-300">
+      Embedded live demo served from Vercel. Try chatting with the assistant in real-time!
+    </p>
+  </section>
+)}
+
+
+
+
+
+{/* Flight Envelope Protection – Visual Results */}
+<div className="grid gap-6 md:grid-cols-2">
+
+  {/* IMAGE 1: Control Architecture Diagram */}
+  <figure className="space-y-3">
+    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <Image
+        src="/media/flight-envelope-protection/image1.png"
+        alt="Fly-by-wire flight envelope protection control architecture"
+        width={1200}
+        height={800}
+        className="w-full h-auto"
+      />
+    </div>
+    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 1.</span>{" "}
+      Functional control architecture showing pilot command shaping via flight envelope protection with angle-of-attack and rate feedback.
+    </figcaption>
+  </figure>
+
+  {/* IMAGE 2: Envelope Protection Engaged */}
+  <figure className="space-y-3">
+    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <Image
+        src="/media/flight-envelope-protection/image2.png"
+        alt="Pilot command vs protected command with envelope protection engaged"
+        width={1200}
+        height={800}
+        className="w-full h-auto"
+      />
+    </div>
+    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 2.</span>{" "}
+      Envelope protection engaged: pilot pitch command exceeding the safe envelope is smoothly limited to maintain allowable angle of attack.
+    </figcaption>
+  </figure>
+
+  {/* IMAGE 3: Nominal Case (No Protection Intervention) */}
+  <figure className="space-y-3">
+    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <Image
+        src="/media/flight-envelope-protection/image3.png"
+        alt="Nominal pitch response without envelope protection intervention"
+        width={1200}
+        height={800}
+        className="w-full h-auto"
+      />
+    </div>
+    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 3.</span>{" "}
+      Nominal operating case where pilot commands remain within the flight envelope and no protection intervention is required.
+    </figcaption>
+  </figure>
+
+  {/* IMAGE 4: Control Law Refinement (Optional Comparison) */}
+  <figure className="space-y-3">
+    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <Image
+        src="/media/flight-envelope-protection/image4.png"
+        alt="Control response before and after envelope protection refinement"
+        width={1200}
+        height={800}
+        className="w-full h-auto"
+      />
+    </div>
+    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 4.</span>{" "}
+      Comparison illustrating refinement of envelope protection logic to eliminate command chattering and achieve stable, damped response.
+    </figcaption>
+  </figure>
+
+</div>
     </Container>
+
+
+
   );
 }

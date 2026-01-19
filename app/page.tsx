@@ -49,7 +49,7 @@ export default function HomePage() {
         <h2 className="text-xl font-semibold">What this portfolio shows</h2>
         <ul className="mt-4 list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
           <li>6-DOF flight dynamics and numerical simulation</li>
-          <li>Control design (PID, LQR, adaptive methods)</li>
+          <li>3-DOF Helicopter Control and Trajectory Tracking - Capstone Project</li>
           <li>MATLAB/Simulink model-based verification</li>
           <li>Embedded hardware control with sensors and actuators</li>
           <li>PLC-based automation and safety logic</li>
