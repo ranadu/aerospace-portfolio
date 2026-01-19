@@ -261,79 +261,156 @@ export default async function ProjectDetail({ params }: { params: Params }) {
 
 
 
-
 {/* Flight Envelope Protection – Visual Results */}
-<div className="grid gap-6 md:grid-cols-2">
 
-  {/* IMAGE 1: Control Architecture Diagram */}
-  <figure className="space-y-3">
-    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-      <Image
-        src="/media/flight-envelope-protection/image1.png"
-        alt="Fly-by-wire flight envelope protection control architecture"
-        width={1200}
-        height={800}
-        className="w-full h-auto"
-      />
-    </div>
-    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
-      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 1.</span>{" "}
-      Functional control architecture showing pilot command shaping via flight envelope protection with angle-of-attack and rate feedback.
-    </figcaption>
-  </figure>
+{p.slug === "flight-envelope-protection" && (
+  <>
+    {/* Flight Envelope Protection – Visual Results */}
+    <section className="space-y-6">
+      <h2 className="text-xl font-semibold">Visual Results</h2>
 
-  {/* IMAGE 2: Envelope Protection Engaged */}
-  <figure className="space-y-3">
-    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-      <Image
-        src="/media/flight-envelope-protection/image2.png"
-        alt="Pilot command vs protected command with envelope protection engaged"
-        width={1200}
-        height={800}
-        className="w-full h-auto"
-      />
-    </div>
-    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
-      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 2.</span>{" "}
-      Envelope protection engaged: pilot pitch command exceeding the safe envelope is smoothly limited to maintain allowable angle of attack.
-    </figcaption>
-  </figure>
+      <div className="grid gap-6 md:grid-cols-2">
 
-  {/* IMAGE 3: Nominal Case (No Protection Intervention) */}
-  <figure className="space-y-3">
-    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-      <Image
-        src="/media/flight-envelope-protection/image3.png"
-        alt="Nominal pitch response without envelope protection intervention"
-        width={1200}
-        height={800}
-        className="w-full h-auto"
-      />
-    </div>
-    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
-      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 3.</span>{" "}
-      Nominal operating case where pilot commands remain within the flight envelope and no protection intervention is required.
-    </figcaption>
-  </figure>
+        {/* IMAGE 1 */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/flight-envelope-protection/image1.png"
+              alt="Fly-by-wire flight envelope protection control architecture"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 1.</span>{" "}
+            Functional control architecture showing pilot command shaping via flight envelope protection with angle-of-attack and rate feedback.
+          </figcaption>
+        </figure>
 
-  {/* IMAGE 4: Control Law Refinement (Optional Comparison) */}
-  <figure className="space-y-3">
-    <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-      <Image
-        src="/media/flight-envelope-protection/image4.png"
-        alt="Control response before and after envelope protection refinement"
-        width={1200}
-        height={800}
-        className="w-full h-auto"
-      />
-    </div>
-    <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
-      <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 4.</span>{" "}
-      Comparison illustrating refinement of envelope protection logic to eliminate command chattering and achieve stable, damped response.
-    </figcaption>
-  </figure>
+        {/* IMAGE 2 */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/flight-envelope-protection/image2.png"
+              alt="Pilot command vs protected command with envelope protection engaged"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 2.</span>{" "}
+            Envelope protection engaged: pilot pitch command exceeding the safe envelope is smoothly limited.
+          </figcaption>
+        </figure>
 
-</div>
+        {/* IMAGE 3 */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/flight-envelope-protection/image3.png"
+              alt="Nominal pitch response without envelope protection"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 3.</span>{" "}
+            Nominal operation without envelope intervention.
+          </figcaption>
+        </figure>
+
+        {/* IMAGE 4 */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/flight-envelope-protection/image4.png"
+              alt="Envelope protection refinement comparison"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 4.</span>{" "}
+            Control-law refinement eliminating chattering and improving damping.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+  </>
+)}
+
+
+
+
+{p.slug === "supersonic-propulsion-design" && (
+  <>
+    {/* Supersonic Propulsion Design – Visual Results */}
+    <section className="space-y-6">
+      <h2 className="text-xl font-semibold">Visual Results</h2>
+
+      <div className="grid gap-6 md:grid-cols-2">
+
+        {/* IMAGE 1 — Inlet Geometry */}
+        <figure className="space-y-3 md:col-span-2">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/supersonic-propulsion/inlet_geometry.png"
+              alt="Three-ramp supersonic inlet geometry designed using Oswatitsch equal-strength shock principle"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-2xl text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 1.</span>{" "}
+            Three-ramp external-compression supersonic inlet designed using the Oswatitsch equal-strength shock principle to maximize total pressure recovery at Mach 3.2.
+          </figcaption>
+        </figure>
+
+        {/* IMAGE 2 — Specific Thrust Map */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/supersonic-propulsion/fict_fspec.png"
+              alt="Specific thrust parametric map versus compressor pressure ratio and turbine inlet temperature"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 2.</span>{" "}
+            Specific thrust variation with compressor pressure ratio and turbine inlet temperature for the fictional turbojet at Mach 3.2, highlighting the feasible design region.
+          </figcaption>
+        </figure>
+
+        {/* IMAGE 3 — TSFC Map */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/supersonic-propulsion/fict_tsfc.png"
+              alt="Thrust specific fuel consumption parametric map for Mach 3.2 turbojet cycle"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 3.</span>{" "}
+            TSFC distribution for physically feasible operating points, illustrating the trade-off between fuel efficiency and thrust at high Mach number.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+  </>
+)}
+
     </Container>
 
 

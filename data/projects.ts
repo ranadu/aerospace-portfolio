@@ -14,6 +14,8 @@ export type Project = {
   | "PLC"
   | "Simulation"
   | "Software"
+  | "Propulsion"
+  | "Thermodynamics"
 )[];
 
   oneLiner: string;
@@ -108,34 +110,33 @@ export const projects: Project[] = [
   includes: { matlab: false, simulink: false, hardware: false, plc: false },
   },
 
-
-
-
+ {
+  title: "Supersonic Propulsion System Design & Trade Study (Mach 3.2)",
+  slug: "supersonic-propulsion-design",
+  status: "Completed",
+  discipline: ["Propulsion", "Thermodynamics", "Simulation"],
+  oneLiner:
+    "Preliminary design and trade study of a Mach 3.2 propulsion system using an Oswatitsch-optimized inlet and parametric turbojet cycle analysis.",
+  summary:
+    "A preliminary propulsion system design study for sustained Mach 3.2 cruise. The project includes the design of a multi-shock supersonic inlet optimized for maximum pressure recovery using the Oswatitsch equal-strength shock principle, followed by a one-dimensional parametric turbojet cycle analysis. A fictional mission-optimized engine is compared against the Olympus 593 off-the-shelf engine to assess feasibility, performance trade-offs, and mission suitability.",
+  engineeringFocus: [
+    "Supersonic inlet design and optimization (multi-shock compression)",
+    "Mission-driven propulsion system sizing and feasibility analysis",
+    "Parametric cycle analysis and constraint-based design selection",
+    "Trade study against off-the-shelf propulsion systems",
+  ],
+  mathAndTheory: [
+    "Compressible flow and oblique/normal shock relations",
+    "Oswatitsch equal-strength shock principle",
+    "One-dimensional turbojet cycle analysis",
+    "Specific thrust and TSFC trade-offs at high Mach number",
+  ],
+  tools: ["MATLAB", "LaTeX"],
+  includes: { matlab: true, simulink: false, hardware: false, plc: false },
+  },
 
 
   // New planned projects
-  {
-    title: "MATLAB/Simulink Aircraft Control Verification",
-    slug: "matlab-simulink-control",
-    status: "Planned",
-    discipline: ["Controls", "Simulation"],
-    oneLiner:
-      "Model-based design in MATLAB/Simulink with root locus, Bode, margins, and controller verification.",
-    summary:
-      "Aircraft longitudinal (or lateral) dynamics modeled and linearized around trim. Control loops built in Simulink with PID and LQR designs, and performance verified using classical frequency-domain tools.",
-    engineeringFocus: [
-      "Model-based design workflow",
-      "Verification via frequency response + margins",
-      "Cross-check against Python implementation",
-    ],
-    mathAndTheory: [
-      "Transfer functions",
-      "Root locus",
-      "Bode plots and stability margins",
-    ],
-    tools: ["MATLAB", "Simulink"],
-    includes: { matlab: true, simulink: true, hardware: false, plc: false },
-  },
   {
     title: "Embedded Hardware Attitude Control Rig",
     slug: "embedded-attitude-control-rig",
