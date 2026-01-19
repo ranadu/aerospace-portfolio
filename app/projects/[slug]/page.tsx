@@ -359,7 +359,7 @@ export default async function ProjectDetail({ params }: { params: Params }) {
         <figure className="space-y-3 md:col-span-2">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
             <Image
-              src="/media/supersonic-propulsion/inlet_geometry.png"
+              src="/media/supersonic-propulsion-design/inlet_geometry.png"
               alt="Three-ramp supersonic inlet geometry designed using Oswatitsch equal-strength shock principle"
               width={1200}
               height={800}
@@ -376,7 +376,7 @@ export default async function ProjectDetail({ params }: { params: Params }) {
         <figure className="space-y-3">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
             <Image
-              src="/media/supersonic-propulsion/fict_fspec.png"
+              src="/media/supersonic-propulsion-design/fict_fspec.png"
               alt="Specific thrust parametric map versus compressor pressure ratio and turbine inlet temperature"
               width={1200}
               height={800}
@@ -393,7 +393,7 @@ export default async function ProjectDetail({ params }: { params: Params }) {
         <figure className="space-y-3">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
             <Image
-              src="/media/supersonic-propulsion/fict_tsfc.png"
+              src="/media/supersonic-propulsion-design/fict_tsfc.png"
               alt="Thrust specific fuel consumption parametric map for Mach 3.2 turbojet cycle"
               width={1200}
               height={800}
