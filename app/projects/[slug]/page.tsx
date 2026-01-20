@@ -357,7 +357,7 @@ export default async function ProjectDetail({ params }: { params: Params }) {
 
         {/* IMAGE 1 — Inlet Geometry */}
         <figure className="space-y-3 md:col-span-2">
-          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-zinc-200 bg-white p-2 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
             <Image
               src="/media/supersonic-propulsion-design/inlet_geometry.png"
               alt="Three-ramp supersonic inlet geometry designed using Oswatitsch equal-strength shock principle"
