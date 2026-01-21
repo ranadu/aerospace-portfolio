@@ -11,7 +11,8 @@ export default function HomePage() {
         
 
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-  I design, simulate, and control aerospace systems — from math and models
+  I design, simulate, and control aerospace systems
+   — from math and models
   to real hardware and software.
 </h1>
 
