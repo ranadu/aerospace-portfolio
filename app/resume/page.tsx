@@ -22,12 +22,12 @@ export default function ResumePage() {
         <section className="space-y-3 pt-6">
           <h2 className="text-xl font-semibold">Core Competencies</h2>
           <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
-            <li>Flight dynamics and 6-DOF simulation</li>
-            <li>Control systems (PID, LQR, adaptive methods)</li>
-            <li>MATLAB/Simulink model-based design and verification</li>
-            <li>Embedded control systems (IMU, actuators)</li>
-            <li>PLC automation and safety logic</li>
-            <li>Engineering software and visualization tools</li>
+            <li>Aerospace systems design and integration</li>
+<li>Flight dynamics, modeling, and control systems (PID, LQR, envelope protection)</li>
+<li>Structural design and load-path analysis (wing box and landing gear)</li>
+<li>Modeling, simulation, and engineering trade studies</li>
+<li>Python and MATLAB technical computing for engineering applications</li>
+<li>Engineering documentation, CAD visualization, and technical communication</li>
           </ul>
         </section>
       </div>

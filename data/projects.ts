@@ -16,6 +16,9 @@ export type Project = {
   | "Software"
   | "Propulsion"
   | "Thermodynamics"
+  | "Aerospace Structures"
+  | "CAD"
+  | "Structural Design"
 )[];
 
   oneLiner: string;
@@ -30,6 +33,7 @@ export type Project = {
     simulink: boolean;
     hardware: boolean;
     plc: boolean;
+    cad: boolean;
   };
 
   repo?: string;
@@ -59,7 +63,7 @@ export const projects: Project[] = [
     "Stability and steady-state error analysis",
   ],
   tools: ["MATLAB", "Simulink", "Control Systems"],
-  includes: { matlab: true, simulink: true, hardware: false, plc: false },
+  includes: { matlab: true, simulink: true, hardware: false, plc: false, cad: false },
    },
   {
   title: "AI Chatbot Assistant",
@@ -82,7 +86,7 @@ export const projects: Project[] = [
     "Frontend component lifecycle and state sync",
   ],
   tools: ["TypeScript", "React", "FastAPI", "GROQ API", "Vercel", "Render"],
-  includes: { matlab: false, simulink: false, hardware: false, plc: false },
+  includes: { matlab: false, simulink: false, hardware: false, plc: false, cad: false },
    },
   {
   title: "Flight Envelope Protection System (Fly-By-Wire)",
@@ -107,7 +111,7 @@ export const projects: Project[] = [
     "Limit-cycle avoidance in control systems",
   ],
   tools: ["Python", "Control systems", "Numerical simulation", "Matplotlib"],
-  includes: { matlab: false, simulink: false, hardware: false, plc: false },
+  includes: { matlab: false, simulink: false, hardware: false, plc: false, cad: false },
   },
 
  {
@@ -132,30 +136,45 @@ export const projects: Project[] = [
     "Specific thrust and TSFC trade-offs at high Mach number",
   ],
   tools: ["MATLAB", "LaTeX"],
-  includes: { matlab: true, simulink: false, hardware: false, plc: false },
+  includes: { matlab: true, simulink: false, hardware: false, plc: false, cad: false },
   },
 
 
-  // New planned projects
   {
-    title: "Embedded Hardware Attitude Control Rig",
-    slug: "embedded-attitude-control-rig",
-    status: "Planned",
-    discipline: ["Controls", "Hardware", "Estimation"],
-    oneLiner:
-      "Real-time discrete PID control using IMU feedback, actuator saturation handling, and telemetry plotting.",
-    summary:
-      "A microcontroller-based closed-loop control system with IMU sensing and motor actuation. Includes filtering, sampling-rate selection, saturation handling, and streaming telemetry to Python/MATLAB for analysis.",
-    engineeringFocus: [
-      "Discrete-time control implementation",
-      "Sensor noise + filtering",
-      "Actuator limits + saturation logic",
-      "Telemetry-driven debugging",
-    ],
-    mathAndTheory: ["Discrete PID", "Sampling and aliasing", "Noise models"],
-    tools: ["Arduino/STM32", "IMU", "Python/MATLAB plotting"],
-    includes: { matlab: true, simulink: false, hardware: true, plc: false },
+  title: "Aircraft Structural Redesign: Wing Box & Landing Gear",
+  slug: "aircraft-structural-redesign",
+  status: "Completed",
+  discipline: ["Aerospace Structures", "CAD", "Structural Design"],
+  oneLiner:
+    "Structural redesign of a light aircraft wing box and landing gear system with CAD modeling, load-path reasoning, and section-based validation.",
+  summary:
+    "This project presents a structural redesign of a light aircraft focusing on the primary wing box and landing gear system. The work emphasizes realistic load paths, structural packaging, and manufacturable geometry. Detailed CAD models were developed in Fusion 360, including sectioned views to verify internal structure, component interfaces, and load transfer regions. The redesign balances structural integrity, simplicity, and clarity of engineering intent for portfolio demonstration.",
+  engineeringFocus: [
+    "Primary structure layout and load-path reasoning",
+    "Wing box geometry, wall thickness selection, and internal volume definition",
+    "Landing gear structural integration and ground load transfer",
+    "CAD-based validation using section analysis and orthographic views",
+  ],
+  mathAndTheory: [
+    "Aircraft structural load paths",
+    "Ground reaction forces and landing loads",
+    "Basic sizing considerations for primary aircraft structures",
+    "Design-for-manufacturability principles",
+  ],
+  tools: [
+    "Fusion 360 (parametric CAD)", "Section analysis and orthographic visualization", "Engineering sketches and layout planning",],
+  includes: { cad: true, matlab: false, simulink: false, hardware: false, plc: false },
   },
+
+
+
+
+
+
+
+
+
+   // New planned projects
   {
     title: "PLC Automation & Safety Interlocks",
     slug: "plc-automation-safety",
@@ -173,6 +192,6 @@ export const projects: Project[] = [
     ],
     mathAndTheory: ["Timing constraints", "Deterministic control behavior"],
     tools: ["OpenPLC/CODESYS/Siemens TIA (one)", "Ladder Logic", "HMI (optional)"],
-    includes: { matlab: false, simulink: false, hardware: true, plc: true },
+    includes: {matlab: false, simulink: false, hardware: true, plc: true, cad: false},
   },
 ];

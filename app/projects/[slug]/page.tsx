@@ -510,6 +510,112 @@ export default async function ProjectDetail({ params }: { params: Params }) {
   </>
 )}
 
+
+
+{p.slug === "aircraft-structural-redesign" && (
+  <>
+    {/* Aircraft Structural Redesign – CAD Results */}
+    <section className="space-y-6">
+<div className="flex items-center justify-between gap-4">    
+    <a
+  href="/docs/3dof-helicopter-control/AER_822_CDR.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+>
+  <svg
+    viewBox="0 0 24 24"
+    className="h-4 w-4 fill-current"
+    aria-hidden="true"
+  >
+    <path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V8h4.5L13 3.5zM8 12h8v1.5H8V12zm0 3h8v1.5H8V15zm0 3h5v1.5H8V18z" />
+  </svg>
+  View Technical Report (PDF)
+</a>
+</div>
+  <h2 className="text-xl font-semibold">Structural CAD Results</h2>
+      <div className="grid gap-6 md:grid-cols-2">
+
+        {/* IMAGE 1 — Wing Box Isometric */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/aircraft-structural-redesign/wingbox_isometric.png"
+              alt="Isometric CAD view of the aircraft wing box primary structure"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 1.</span>{" "}
+            Isometric CAD view of the redesigned aircraft wing box showing the primary load-carrying structure.
+          </figcaption>
+        </figure>
+
+        {/* IMAGE 2 — Wing Box Section Analysis */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/aircraft-structural-redesign/wingbox_section.png"
+              alt="Section analysis of the wing box showing internal structure"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 2.</span>{" "}
+            Section analysis of the wing box revealing internal geometry and load-carrying walls.
+          </figcaption>
+        </figure>
+
+        {/* IMAGE 3 — Landing Gear Isometric */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/aircraft-structural-redesign/landing_gear_iso.png"
+              alt="Isometric CAD view of the aircraft landing gear design"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 3.</span>{" "}
+            Isometric CAD view of the landing gear assembly designed to transfer ground loads into the airframe.
+          </figcaption>
+        </figure>
+
+        {/* IMAGE 4 — Landing Gear Section View */}
+        <figure className="space-y-3">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <Image
+              src="/media/aircraft-structural-redesign/landing_gear_section.png"
+              alt="Section view of the landing gear showing internal geometry"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <figcaption className="mx-auto max-w-md text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium text-zinc-700 dark:text-zinc-200">Figure 4.</span>{" "}
+            Section view of the landing gear illustrating internal structure and load path during ground contact.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+  </>
+)}
+
+
+
+
+
+
+
+
     </Container>
 
 
