@@ -111,7 +111,7 @@ export const projects: Project[] = [
   },
 
  {
-  title: "Supersonic Propulsion System Design & Trade Study (Mach 3.2)",
+  title: "Supersonic Propulsion System Design & Trade Study",
   slug: "supersonic-propulsion-design",
   status: "Completed",
   discipline: ["Propulsion", "Thermodynamics", "Simulation"],

@@ -54,7 +54,40 @@ export default async function ProjectDetail({ params }: { params: Params }) {
        {/* /* Image Section */}
         {p.slug === "3dof-helicopter-control" && (
   <section className="space-y-6">
-    <h2 className="text-xl font-semibold">Media</h2>
+    {/* <h2 className="text-xl font-semibold">Media</h2> */}
+<div className="flex items-center justify-between gap-4">    
+    <a
+  href="/docs/3dof-helicopter-control/AER_822_CDR.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+>
+  <svg
+    viewBox="0 0 24 24"
+    className="h-4 w-4 fill-current"
+    aria-hidden="true"
+  >
+    <path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V8h4.5L13 3.5zM8 12h8v1.5H8V12zm0 3h8v1.5H8V15zm0 3h5v1.5H8V18z" />
+  </svg>
+  View Technical Report (PDF)
+</a>
+
+<a
+        href="https://github.com/ranadu/Capstone-project-3-DOF-helicopter"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-4 w-4 fill-current"
+        >
+          <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.97.57.1.78-.25.78-.55v-2.02c-3.2.7-3.88-1.55-3.88-1.55-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.16 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.8 0c2.2-1.5 3.18-1.19 3.18-1.19.63 1.64.23 2.86.11 3.16.75.81 1.2 1.85 1.2 3.11 0 4.43-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .3.2.65.79.54A11.52 11.52 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5Z" />
+        </svg>
+        View GitHub Code
+      </a>
+</div>
 
     {/* Hardware overview image
     <figure className="space-y-2">
@@ -173,7 +206,7 @@ export default async function ProjectDetail({ params }: { params: Params }) {
 </div>
 
 
-    {/* Experimental video */}
+    {/* Video */}
     <figure className="space-y-2">
       <video
         className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800"
@@ -195,10 +228,6 @@ export default async function ProjectDetail({ params }: { params: Params }) {
 )}
 
         {/* /* End Image Section */}
-
-
-
-
         <section className="grid gap-6 sm:grid-cols-2">
           <div className="space-y-2">
             <h2 className="text-xl font-semibold">Engineering Focus</h2>
@@ -240,18 +269,40 @@ export default async function ProjectDetail({ params }: { params: Params }) {
       </div>
 
 
+
+
       {/* Embed AI Chatbot Web App */}
 {p.slug === "ai-chatbot-assistant" && (
   <section className="space-y-4">
-    <h2 className="text-xl font-semibold">Live Demo</h2>
+    <div className="flex flex-wrap items-center justify-between gap-3">
+      <h2 className="text-xl font-semibold">Live Demo</h2>
+
+      <a
+        href="https://github.com/ranadu/AI-chatbot"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-4 w-4 fill-current"
+        >
+          <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.97.57.1.78-.25.78-.55v-2.02c-3.2.7-3.88-1.55-3.88-1.55-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.16 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.8 0c2.2-1.5 3.18-1.19 3.18-1.19.63 1.64.23 2.86.11 3.16.75.81 1.2 1.85 1.2 3.11 0 4.43-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .3.2.65.79.54A11.52 11.52 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5Z" />
+        </svg>
+        View on GitHub
+      </a>
+    </div>
+
     <div className="aspect-video w-full overflow-hidden rounded-2xl border border-zinc-200 shadow-sm dark:border-zinc-800">
       <iframe
         src="https://ai-chatbot-cyan-alpha.vercel.app"
         title="AI Chatbot Live Demo"
-        className="w-full h-full"
+        className="h-full w-full"
         allow="clipboard-write"
       />
     </div>
+
     <p className="text-sm text-zinc-600 dark:text-zinc-300">
       Embedded live demo served from Vercel. Try chatting with the assistant in real-time!
     </p>
@@ -260,12 +311,28 @@ export default async function ProjectDetail({ params }: { params: Params }) {
 
 
 
-
 {/* Flight Envelope Protection – Visual Results */}
 
 {p.slug === "flight-envelope-protection" && (
   <>
-    {/* Flight Envelope Protection – Visual Results */}
+<div className="flex justify-end">
+<a
+        href="https://github.com/ranadu/FlightEnvelopeProtection"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-4 w-4 fill-current"
+        >
+          <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.97.57.1.78-.25.78-.55v-2.02c-3.2.7-3.88-1.55-3.88-1.55-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.16 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.8 0c2.2-1.5 3.18-1.19 3.18-1.19.63 1.64.23 2.86.11 3.16.75.81 1.2 1.85 1.2 3.11 0 4.43-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .3.2.65.79.54A11.52 11.52 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5Z" />
+        </svg>
+        View GitHub Code
+      </a>
+</div>
+    
     <section className="space-y-6">
       <h2 className="text-xl font-semibold">Visual Results</h2>
 
@@ -351,6 +418,38 @@ export default async function ProjectDetail({ params }: { params: Params }) {
   <>
     {/* Supersonic Propulsion Design – Visual Results */}
     <section className="space-y-6">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <a
+  href="/docs/supersonic-propulsion-design/Preliminary_Design_and_Trade_Study_of_Supersonic_Propulsion_Systems_for_a_Mach_3_2_Commercial_Transport.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+>
+  <svg
+    viewBox="0 0 24 24"
+    className="h-4 w-4 fill-current"
+    aria-hidden="true"
+  >
+    <path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V8h4.5L13 3.5zM8 12h8v1.5H8V12zm0 3h8v1.5H8V15zm0 3h5v1.5H8V18z" />
+  </svg>
+  View Technical Report (PDF)
+</a>
+      <a
+        href="https://github.com/ranadu/SupersonicPropulsionDesign"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-4 w-4 fill-current"
+        >
+          <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.97.57.1.78-.25.78-.55v-2.02c-3.2.7-3.88-1.55-3.88-1.55-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.16 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.8 0c2.2-1.5 3.18-1.19 3.18-1.19.63 1.64.23 2.86.11 3.16.75.81 1.2 1.85 1.2 3.11 0 4.43-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .3.2.65.79.54A11.52 11.52 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5Z" />
+        </svg>
+        View GitHub Code
+      </a>
+    </div>
       <h2 className="text-xl font-semibold">Visual Results</h2>
 
       <div className="grid gap-6 md:grid-cols-2">
