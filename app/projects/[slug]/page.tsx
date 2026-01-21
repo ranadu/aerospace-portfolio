@@ -518,7 +518,7 @@ export default async function ProjectDetail({ params }: { params: Params }) {
     <section className="space-y-6">
 <div className="flex items-center justify-between gap-4">    
     <a
-  href="/docs/3dof-helicopter-control/AER_822_CDR.pdf"
+  href="/docs/aircraft-structural-redesign/621_Redesign_Project.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
