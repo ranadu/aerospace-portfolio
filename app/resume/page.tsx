@@ -11,7 +11,7 @@ export default function ResumePage() {
         </p>
 
         <a
-          href="docs/resume_robert_anadu_hybrid.pdf"
+          href="docs/robert_anadu_resume1.pdf"
           className="inline-block rounded-xl bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-800"
           target="_blank"
           rel="noreferrer"
