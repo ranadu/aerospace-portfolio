@@ -13,9 +13,9 @@ export default function Navbar() {
             <Link href="/projects" className="hover:underline">
               Projects
             </Link>
-            <Link href="/resume" className="hover:underline">
+            {/* <Link href="/resume" className="hover:underline">
               Resume
-            </Link>
+            </Link> */}
             <Link href="/contact" className="hover:underline">
               Contact
             </Link>

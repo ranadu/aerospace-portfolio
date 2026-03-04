@@ -31,12 +31,12 @@ export default function HomePage() {
             View Projects
           </Link>
 
-          <Link
+          {/* <Link
             href="/resume"
             className="rounded-xl border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-950 dark:hover:bg-zinc-900"
           >
             Resume
-          </Link>
+          </Link> */}
 
           <a
             href="https://github.com/ranadu"
