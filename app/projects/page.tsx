@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectsFilter from "@/components/ProjectsFilter";
 import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
@@ -8,14 +8,12 @@ export default function ProjectsPage() {
       <div className="space-y-2">
         <h1 className="text-2xl font-semibold">Projects</h1>
         <p className="text-zinc-600 dark:text-zinc-300">
-          Simulation, controls, avionics logic, MATLAB/Simulink verification, embedded hardware, and PLC safety systems.
+          Control systems, embedded logic, structural design, propulsion analysis, and engineering software.
         </p>
       </div>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {projects.map((p) => (
-          <ProjectCard key={p.slug} p={p} />
-        ))}
+      <div className="mt-8">
+        <ProjectsFilter projects={projects} />
       </div>
     </Container>
   );

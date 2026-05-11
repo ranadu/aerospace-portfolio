@@ -19,6 +19,9 @@ export type Project = {
   | "Aerospace Structures"
   | "CAD"
   | "Structural Design"
+  | "Mechatronics"
+  | "Embedded Systems"
+  | "Mechanical Design"
 )[];
 
   oneLiner: string;
@@ -45,7 +48,7 @@ export const projects: Project[] = [
   title: "3-DOF Helicopter Control and Trajectory Tracking - Capstone Project",
   slug: "3dof-helicopter-control",
   status: "Completed",
-  discipline: ["Controls", "Simulation", "Flight Dynamics"],
+  discipline: ["Controls", "Simulation", "Flight Dynamics", "Mechatronics", "Hardware"],
   oneLiner:
     "Closed-loop PID control of a 3-DOF helicopter achieving stable trajectory tracking under actuator constraints.",
   summary:
@@ -71,9 +74,9 @@ export const projects: Project[] = [
   status: "Completed",
   discipline: ["Software"],
   oneLiner:
-    "A full-stack AI chatbot built with FastAPI and React, supporting persistent memory and dynamic UX features.",
+    "Full-stack AI chatbot demonstrating backend API design, persistent state management, and cloud deployment — skills directly applicable to embedded tooling and engineering software.",
   summary:
-    "Developed an interactive chatbot using a custom FastAPI backend connected to the GROQ LLM API, with a React/TypeScript frontend featuring dark mode, emoji picker, chat history, and real-time assistant feedback. Deployed using Render (backend) and Vercel (frontend).",
+    "Built to demonstrate full-stack software engineering capability alongside the hardware-focused projects in this portfolio. Developed a custom FastAPI backend connected to the GROQ LLM API, with a React/TypeScript frontend featuring dark mode, chat history, and real-time assistant feedback. Deployed using Render (backend) and Vercel (frontend). Relevant to engineering roles requiring software tooling, data pipeline work, or HMI/dashboard development alongside embedded systems.",
   engineeringFocus: [
     "Backend API with memory management (SQLite)",
     "Frontend UX with live typing indicator and theming",
@@ -92,7 +95,7 @@ export const projects: Project[] = [
   title: "Flight Envelope Protection System (Fly-By-Wire)",
   slug: "flight-envelope-protection",
   status: "Completed",
-  discipline: ["Avionics", "Controls", "Flight Dynamics"],
+  discipline: ["Avionics", "Controls", "Flight Dynamics", "Embedded Systems"],
   oneLiner:
     "Fly-by-wire envelope protection that limits pilot pitch commands to prevent stall and unsafe aircraft states.",
   summary:
@@ -144,7 +147,7 @@ export const projects: Project[] = [
   title: "Aircraft Structural Redesign: Wing Box & Landing Gear",
   slug: "aircraft-structural-redesign",
   status: "Completed",
-  discipline: ["Aerospace Structures", "CAD", "Structural Design"],
+  discipline: ["Aerospace Structures", "CAD", "Structural Design", "Mechanical Design"],
   oneLiner:
     "Structural redesign of a light aircraft wing box and landing gear system with CAD modeling, load-path reasoning, and section-based validation.",
   summary:
@@ -174,24 +177,58 @@ export const projects: Project[] = [
 
 
 
-   // New planned projects
   {
-    title: "PLC Automation & Safety Interlocks",
-    slug: "plc-automation-safety",
-    status: "Planned",
-    discipline: ["PLC", "Hardware", "Software"],
+    title: "IMU Attitude Estimator — Kalman Filter on Embedded Hardware",
+    slug: "imu-attitude-estimator",
+    status: "Completed",
+    discipline: ["Controls", "Embedded Systems", "Mechatronics", "Simulation", "Hardware"],
     oneLiner:
-      "Ladder logic sequencing with interlocks, fault handling, and emergency-stop safety behavior.",
+      "Real-time roll/pitch estimation using a Kalman filter fusing MPU-6050 accelerometer and gyroscope data, implemented in embedded C and validated in Python simulation.",
     summary:
-      "Industrial automation project using a PLC environment (real or simulated) with an I/O map, state sequencing, timers, interlocks, E-stop, and fault recovery. Documented with state diagrams and safety rationale.",
+      "A real-time attitude estimation system built around the MPU-6050 IMU (accelerometer + gyroscope), reading sensor data over I2C on Arduino and STM32 platforms. The system implements a discrete 2-state Kalman filter that fuses noisy accelerometer measurements with drifting gyroscope integration to produce accurate, low-latency attitude estimates. The filter simultaneously estimates gyroscope bias online, correcting for sensor drift without factory calibration. A full Python simulation with realistic MPU-6050 noise models validates filter design before hardware deployment — comparing accelerometer-only (RMS 2.01°), gyroscope integration (RMS 13.6°), complementary filter (RMS 0.36°), and Kalman filter (RMS 0.30°) approaches. Sensor data is streamed over UART at 100 Hz for real-time logging and visualization.",
     engineeringFocus: [
-      "Deterministic sequencing",
-      "Interlocks and safety logic",
-      "Fault handling + recovery",
-      "I/O mapping and timing",
+      "Discrete 2-state Kalman filter design and implementation (angle + gyro bias)",
+      "I2C sensor interfacing at register level — MPU-6050 burst reads, DLPF configuration",
+      "Online gyro bias estimation without factory calibration",
+      "Python simulation for filter validation before hardware deployment",
+      "Real-time embedded C firmware structured for deterministic 100 Hz execution",
     ],
-    mathAndTheory: ["Timing constraints", "Deterministic control behavior"],
-    tools: ["OpenPLC/CODESYS/Siemens TIA (one)", "Ladder Logic", "HMI (optional)"],
-    includes: {matlab: false, simulink: false, hardware: true, plc: true, cad: false},
+    mathAndTheory: [
+      "Discrete Kalman filter: predict-update cycle, covariance propagation",
+      "2-state linear system: [roll angle, gyro bias] — observability analysis",
+      "Sensor fusion: complementary filter vs. Kalman filter trade-offs",
+      "IMU noise characterisation: white noise floor, constant bias drift",
+      "I²C protocol: register-level addressing, burst read, clock stretching",
+    ],
+    tools: ["C (Arduino / STM32 HAL)", "Python", "NumPy", "Matplotlib", "I²C protocol"],
+    includes: { matlab: false, simulink: false, hardware: true, plc: false, cad: false },
+    repo: "https://github.com/ranadu/imu-attitude-estimator",
+  },
+
+  {
+    title: "Conveyor Control PLC — Safety Interlocks & Fault Handling",
+    slug: "plc-conveyor-control",
+    status: "Completed",
+    discipline: ["PLC", "Embedded Systems", "Mechatronics", "Software"],
+    oneLiner:
+      "IEC 61131-3 Structured Text PLC controller for an automated conveyor — state machine sequencing, jam detection, fault latching, and hardwired E-stop safety override.",
+    summary:
+      "A safety-oriented PLC controller written in IEC 61131-3 Structured Text for an automated conveyor belt system. The controller implements a 4-state machine (IDLE → STARTING → RUNNING → FAULT) with a 2-second safe-start delay before motor energisation, jam detection via a part-present timer (fault if part active > 3 s), and fault latching requiring deliberate operator RESET. The E-stop is wired NC (normally closed) and evaluated unconditionally at the top of every scan cycle — outside the state machine — so it cannot be masked by software state. A Python simulation of the full PLC scan cycle generates a timing diagram demonstrating both fault scenarios: jam detection and E-stop response. Code is compatible with OpenPLC Runtime (Raspberry Pi), CODESYS, and Siemens TIA Portal.",
+    engineeringFocus: [
+      "4-state machine: IDLE → STARTING → RUNNING → FAULT",
+      "Hardwired NC E-stop evaluated outside state machine — cannot be software-masked",
+      "Jam detection via TON timer — fault latches on part-present > 3 s",
+      "Fault latching with conditional RESET (E-stop clear + jam cleared)",
+      "IEC 61131-3 Structured Text — compatible with OpenPLC, CODESYS, TIA Portal",
+    ],
+    mathAndTheory: [
+      "Deterministic scan cycle execution and timing guarantees",
+      "NC contact safety convention (fail-safe wiring)",
+      "State machine design for safety-critical sequential logic",
+      "IEC 60204-1 Category 0 stop via hardwired E-stop circuit",
+    ],
+    tools: ["IEC 61131-3 Structured Text", "OpenPLC Runtime", "Python", "Matplotlib"],
+    includes: { matlab: false, simulink: false, hardware: true, plc: true, cad: false },
+    repo: "https://github.com/ranadu/plc-conveyor-control",
   },
 ];
