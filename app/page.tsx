@@ -24,8 +24,8 @@ export default function HomePage() {
           BEng Aerospace Engineering, Toronto Metropolitan University, 2024&nbsp;·&nbsp;Toronto
         </p>
 
-        <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          I'm an aerospace engineer. I build control systems, write embedded firmware, and test them on real hardware.
+        <h1 className="max-w-3xl text-2xl font-semibold tracking-tight sm:text-3xl">
+          I build control systems, write embedded firmware, and test them on real hardware.
         </h1>
 
         <p className="max-w-2xl text-zinc-600 dark:text-zinc-300">
@@ -65,11 +65,12 @@ export default function HomePage() {
       <section className="mt-14 max-w-2xl space-y-3">
         <h2 className="text-xl font-semibold">About me</h2>
         <p className="text-zinc-600 dark:text-zinc-300">
-          2024 aerospace engineering grad from TMU. My focus has been controls and embedded
-          systems: capstone was a full closed-loop PID controller on a real Quanser helicopter
-          rig, then I built Kalman filter firmware in C for STM32, and a safety-critical PLC
-          controller from scratch. I also have work in structures and propulsion. Open to roles
-          in aerospace, mechatronics, or embedded/firmware.
+          I hold a BEng in Aerospace Engineering from Toronto Metropolitan University (2024).
+          My focus has been controls and embedded systems: my capstone was a full closed-loop
+          PID controller on a real Quanser helicopter rig, and since then I've built Kalman
+          filter firmware in C for STM32 and a safety-critical PLC controller from scratch.
+          I also have work in structures and propulsion. Open to roles in aerospace,
+          mechatronics, or embedded/firmware.
         </p>
       </section>
 
