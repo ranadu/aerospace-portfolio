@@ -43,6 +43,13 @@ export default function ProjectCard({ p }: { p: Project }) {
           </span>
         )}
       </div>
+
+      {p.highlight && (
+        <p className="mt-3 border-t border-zinc-100 pt-3 text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+          <span className="mr-1 font-semibold text-zinc-400 dark:text-zinc-500">→</span>
+          {p.highlight}
+        </p>
+      )}
     </Link>
   );
 }

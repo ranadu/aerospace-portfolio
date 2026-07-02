@@ -8,7 +8,7 @@ export default function ProjectsPage() {
       <div className="space-y-2">
         <h1 className="text-2xl font-semibold">Projects</h1>
         <p className="text-zinc-600 dark:text-zinc-300">
-          Control systems, embedded logic, structural design, propulsion analysis, and engineering software.
+          Control systems, embedded firmware, mechatronics, structures, and propulsion.
         </p>
       </div>
 

@@ -21,19 +21,18 @@ export default function HomePage() {
       {/* ── Hero ── */}
       <section className="space-y-6">
         <p className="text-sm text-zinc-500 dark:text-zinc-400">
-          Engineering graduate&nbsp;·&nbsp;Toronto&nbsp;·&nbsp;Controls&nbsp;·&nbsp;Embedded Systems&nbsp;·&nbsp;Mechatronics&nbsp;·&nbsp;Structures
+          BEng Aerospace Engineering, Toronto Metropolitan University, 2024&nbsp;·&nbsp;Toronto
         </p>
 
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          I design control systems and embedded solutions —
-          from dynamics and simulation to real hardware and software.
+          I'm an aerospace engineer. I build control systems, write embedded firmware, and test them on real hardware.
         </h1>
 
         <p className="max-w-2xl text-zinc-600 dark:text-zinc-300">
-          Engineering portfolio demonstrating end-to-end system design: from first-principles
-          dynamics and control law development to embedded C firmware, simulation validation,
-          and real hardware testing. Background in aerospace, with skills that transfer directly
-          to mechatronics, robotics, and embedded systems roles.
+          Most of my work sits at the intersection of aerospace and embedded systems. I've built
+          a closed-loop helicopter controller validated on a real Quanser rig, written Kalman
+          filter firmware running on STM32, and designed a safety-critical PLC controller from
+          scratch. I like the full stack: derive the model, write the code, see what breaks.
         </p>
 
         <div className="flex flex-wrap gap-3 pt-1">
@@ -66,12 +65,11 @@ export default function HomePage() {
       <section className="mt-14 max-w-2xl space-y-3">
         <h2 className="text-xl font-semibold">About me</h2>
         <p className="text-zinc-600 dark:text-zinc-300">
-          Aerospace Engineering graduate with hands-on experience in control systems, embedded
-          firmware, structural design, and engineering simulation. I build things end-to-end —
-          from a 3-axis helicopter control system validated on real hardware, to a Kalman
-          filter-based attitude estimator running on STM32. I&apos;m looking for roles in
-          aerospace, mechatronics, or embedded/firmware development where rigorous engineering
-          and real hardware intersect.
+          2024 aerospace engineering grad from TMU. My focus has been controls and embedded
+          systems: capstone was a full closed-loop PID controller on a real Quanser helicopter
+          rig, then I built Kalman filter firmware in C for STM32, and a safety-critical PLC
+          controller from scratch. I also have work in structures and propulsion. Open to roles
+          in aerospace, mechatronics, or embedded/firmware.
         </p>
       </section>
 
@@ -103,12 +101,11 @@ export default function HomePage() {
       <section className="mt-14">
         <h2 className="text-xl font-semibold">What this portfolio shows</h2>
         <ul className="mt-4 list-disc space-y-2 pl-6 text-zinc-600 dark:text-zinc-300">
-          <li>Closed-loop control design — PID tuning and stability analysis, validated on real hardware</li>
-          <li>Embedded firmware in C — I²C sensor drivers, real-time Kalman filtering on STM32/Arduino</li>
-          <li>Safety-critical logic — command shaping, saturation limits, and fault-tolerant behavior</li>
-          <li>First-principles thermodynamic system design and propulsion trade studies</li>
-          <li>Mechanical structural design with CAD, load-path reasoning, and section analysis</li>
-          <li>Engineering software for simulation, data visualization, and technical tooling</li>
+          <li>Closed-loop PID and cascade control, tuned on real hardware not just simulation</li>
+          <li>Embedded C firmware: register-level I²C drivers, Kalman filtering at 100-200 Hz on STM32 and Arduino</li>
+          <li>Safety-critical PLC logic in IEC 61131-3 Structured Text, with fault latching and E-stop design</li>
+          <li>Propulsion cycle analysis and inlet design for supersonic cruise</li>
+          <li>Structural wing box sizing, load path analysis, and parametric CAD in Fusion 360</li>
         </ul>
       </section>
     </Container>

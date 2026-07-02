@@ -6,7 +6,7 @@ export default function Footer() {
       <Container>
         <div className="text-sm text-zinc-600 dark:text-zinc-400">
           <p>© {new Date().getFullYear()} Robert Anadu</p>
-          <p className="mt-1">Controls • Simulation • Hardware • Software</p>
+          <p className="mt-1">Controls · Embedded Systems · Structures · Propulsion</p>
         </div>
       </Container>
     </footer>
